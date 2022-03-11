@@ -1,27 +1,28 @@
 {
-    "name": "drupal/pantheon_decoupled_drupal_tools",
-    "authors": [
-        {
-            "name": "Your name here",
-            "homepage": "https://www.drupal.org/u/your_name_here",
-            "role": "Maintainer"
-        },
-        {
-            "name": "Contributors",
-            "homepage": "https://www.drupal.org/node/NID/committers",
-            "role": "Contributors"
-        }
-    ],
-    "require": {
-        "drupal/default_content": "^2.0@alpha",
-        "drupal/jsonapi_hypermedia": "^1.6",
-        "drupal/jsonapi_menu_items": "^1.2",
-        "drupal/simple_oauth": "^5"
+  "name": "drupal/pantheon_decoupled_drupal_tools",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Your name here",
+      "homepage": "https://www.drupal.org/u/your_name_here",
+      "role": "Maintainer"
     },
-    "require-dev": {
-        "symplify/monorepo-builder": "^10.1"
-    },
-    "replace": {
-        "drupal/pantheon_decoupled": "self.version"
+    {
+      "name": "Contributors",
+      "homepage": "https://www.drupal.org/node/NID/committers",
+      "role": "Contributors"
     }
+  ],
+  "require": {
+    "drupal/default_content": "^2.0@alpha",
+    "drupal/jsonapi_hypermedia": "^1.6",
+    "drupal/jsonapi_menu_items": "^1.2",
+    "drupal/simple_oauth": "^5"
+  },
+  "require-dev": {
+    "symplify/monorepo-builder": "^10.1"
+  },
+  "replace": {
+    "drupal/pantheon_decoupled": "self.version"
+  }
 }
