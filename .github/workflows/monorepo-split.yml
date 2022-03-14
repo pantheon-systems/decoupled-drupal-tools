@@ -18,10 +18,11 @@ jobs:
       fail-fast: false
       matrix:
         # define package to repository map
-          local_path:
-              ["modules/pantheon_decoupled", "profiles/pantheon_decoupled_profile", "profiles/pantheon_decoupled"]
-          split_repository:
-              ["drupal_pantheon_decoupled", "drupal_pantheon_decoupled_profile", "drupal_pantheon_decoupled_umami_demo"]
+        include:
+          - local_path: "modules/pantheon_decoupled"
+            split_repository: "drupal_pantheon_decoupled"
+          - local_path: "profiles/pantheon_decoupled_profile"
+            split_repository: "drupal_pantheon_decoupled_profile"
     steps:
       - uses: actions/checkout@v2
 
