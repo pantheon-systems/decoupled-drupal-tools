@@ -1,7 +1,7 @@
 name: Pantheon Decoupled Example
 type: module
-description: Import the content for the Pantheon decoupled profile.
-package: Custom
+description: Example content to demonstrate Decoupled Drupal use cases
+package: Web services
 core: 8.x
 core_version_requirement: ^8 || ^9
 dependencies:

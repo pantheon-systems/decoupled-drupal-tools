@@ -1,6 +1,6 @@
 {
   "name": "drupal/pantheon_decoupled",
-  "description": "Customization for Pantheon's Decoupled Sites.",
+  "description": "Recommended configuration for Decoupled sites on Pantheon",
   "keywords": [
     "Drupal",
     "decoupled"
@@ -13,21 +13,8 @@
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_hypermedia": "^1.6"
   },
-  "homepage": "https://www.drupal.org/project/decoupled_preview",
-  "authors": [
-    {
-      "name": "Your name here",
-      "homepage": "https://www.drupal.org/u/your_name_here",
-      "role": "Maintainer"
-    },
-    {
-      "name": "Contributors",
-      "homepage": "https://www.drupal.org/node/NID/committers",
-      "role": "Contributors"
-    }
-  ],
+  "homepage": "https://www.drupal.org/project/pantheon_decoupled",
   "support": {
-    "issues": "https://www.drupal.org/project/issues/decoupled_preview",
-    "source": "http://cgit.drupalcode.org/decoupled_preview"
+    "issues": "https://www.drupal.org/project/issues/pantheon_decoupled"
   }
 }

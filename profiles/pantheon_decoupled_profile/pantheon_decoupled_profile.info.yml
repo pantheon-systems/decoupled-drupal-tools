@@ -1,11 +1,10 @@
-name: "Pantheon Decoupled"
+name: "Pantheon Decoupled Profile"
 type: profile
 base profile: standard
-description: 'Profile for Pantheon Decoupled.'
-core_version_requirement: '^8.8 || ^9'
+description: "Suggested install profile for decoupled Drupal sites"
+core_version_requirement: "^8.8 || ^9"
 dependencies:
-  - decoupled_preview
-  - pantheon_decoupled
+  - pantheon_decoupled:pantheon_decoupled
 
 themes:
   - gin
