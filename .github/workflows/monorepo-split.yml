@@ -23,6 +23,8 @@ jobs:
             split_repository: "drupal_pantheon_decoupled"
           - local_path: "profiles/pantheon_decoupled_profile"
             split_repository: "drupal_pantheon_decoupled_profile"
+          - local_path: "profiles/pantheon_decoupled_umami_demo"
+            split_repository: "drupal_pantheon_decoupled_umami_demo"
     steps:
       - uses: actions/checkout@v2
 
