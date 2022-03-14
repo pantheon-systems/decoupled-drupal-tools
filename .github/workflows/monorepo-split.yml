@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      fail-fast: false
       matrix:
         # define package to repository map
         package:
