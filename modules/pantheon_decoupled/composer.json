@@ -7,12 +7,24 @@
   ],
   "type": "drupal-module",
   "license": "GPL-2.0+",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "git",
+      "url": "git@github.com:pantheon-systems/decoupled_preview.git"
+    }
+  ],
   "require": {
     "drupal/default_content": "^2.0@alpha",
     "drupal/simple_oauth": "^5",
     "drupal/jsonapi_menu_items": "^1.2",
-    "drupal/jsonapi_hypermedia": "^1.6"
+    "drupal/jsonapi_hypermedia": "^1.6",
+    "drupal/decoupled_preview": "dev-main"
   },
+  "minimum-stability": "dev",
   "homepage": "https://www.drupal.org/project/pantheon_decoupled",
   "support": {
     "issues": "https://www.drupal.org/project/issues/pantheon_decoupled"
