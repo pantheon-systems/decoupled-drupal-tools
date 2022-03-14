@@ -1,28 +1,41 @@
 {
-  "name": "drupal/pantheon_decoupled_drupal_tools",
-  "type": "drupal-module",
-  "authors": [
-    {
-      "name": "Your name here",
-      "homepage": "https://www.drupal.org/u/your_name_here",
-      "role": "Maintainer"
+    "name": "drupal/pantheon_decoupled_drupal_tools",
+    "type": "drupal-module",
+    "require": {
+        "drupal/decoupled_preview": "dev-main",
+        "drupal/default_content": "^2.0@alpha",
+        "drupal/jsonapi_hypermedia": "^1.6",
+        "drupal/jsonapi_menu_items": "^1.2",
+        "drupal/simple_oauth": "^5"
     },
-    {
-      "name": "Contributors",
-      "homepage": "https://www.drupal.org/node/NID/committers",
-      "role": "Contributors"
-    }
-  ],
-  "require": {
-    "drupal/default_content": "^2.0@alpha",
-    "drupal/jsonapi_hypermedia": "^1.6",
-    "drupal/jsonapi_menu_items": "^1.2",
-    "drupal/simple_oauth": "^5"
-  },
-  "require-dev": {
-    "symplify/monorepo-builder": "^10.1"
-  },
-  "replace": {
-    "drupal/pantheon_decoupled": "self.version"
-  }
+    "require-dev": {
+        "symplify/monorepo-builder": "^10.1"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:pantheon-systems/decoupled_preview.git"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:pantheon-systems/pantheon_decoupled.git"
+        }
+    ],
+    "extra": {
+        "patches": {
+            "drupal/core": {
+                "1356276#675: Allow profiles to define a base/parent profile": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch"
+            }
+        }
+    },
+    "replace": {
+        "drupal/pantheon_decoupled": "self.version",
+        "drupal/pantheon_decoupled_profile": "self.version",
+        "drupal/pantheon_decoupled_umami_demo": "self.version"
+    },
+    "minimum-stability": "dev"
 }
