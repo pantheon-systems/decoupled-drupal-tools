@@ -15,17 +15,13 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         # define package to repository map
-        package:
-          - local_path: "modules/pantheon_decoupled"
-            split_repository: "drupal_pantheon_decoupled"
-        package:
-          - local_path: "profiles/pantheon_decoupled_profile"
-            split_repository: "drupal_pantheon_decoupled_profile"
-        package:
-          - local_path: "profiles/pantheon_decoupled"
-            split_repository: "drupal_pantheon_decoupled_umami_demo"
+          local_path:
+              ["modules/pantheon_decoupled", "profiles/pantheon_decoupled_profile", "profiles/pantheon_decoupled"]
+          split_repository:
+              ["drupal_pantheon_decoupled", "drupal_pantheon_decoupled_profile", "drupal_pantheon_decoupled_umami_demo"]
     steps:
       - uses: actions/checkout@v2
 
@@ -34,11 +30,11 @@ jobs:
         uses: "symplify/monorepo-split-github-action@2.1"
         with:
           # ↓ split <local_path> directory
-          package_directory: "${{ matrix.package.local_path }}"
+          package_directory: "${{ matrix.local_path }}"
 
           # ↓ into https://github.com/org/split_repository repository
           repository_organization: "backlineint"
-          repository_name: "${{ matrix.package.split_repository }}"
+          repository_name: "${{ matrix.split_repository }}"
 
           # ↓ the user signed under the split commit
           user_name: "brian-ci"
@@ -50,10 +46,10 @@ jobs:
         with:
           tag: ${GITHUB_REF#refs/tags/}
 
-          package_directory: "${{ matrix.package.local_path }}"
+          package_directory: "${{ matrix.local_path }}"
 
           repository_organization: "backlineint"
-          repository_name: "${{ matrix.package.split_repository }}"
+          repository_name: "${{ matrix.split_repository }}"
 
           # ↓ the user signed under the split commit
           user_name: "brian-ci"
