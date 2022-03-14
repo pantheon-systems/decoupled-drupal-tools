@@ -1,0 +1,61 @@
+name: "Packages Split"
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+
+env:
+  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+jobs:
+  packages_split:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # define package to repository map
+        package:
+          - local_path: "modules/pantheon_decoupled"
+            split_repository: "drupal_pantheon_decoupled"
+        package:
+          - local_path: "profiles/pantheon_decoupled_profile"
+            split_repository: "drupal_pantheon_decoupled_profile"
+        package:
+          - local_path: "profiles/pantheon_decoupled"
+            split_repository: "drupal_pantheon_decoupled_umami_demo"
+    steps:
+      - uses: actions/checkout@v2
+
+      # no tag
+      - if: "!startsWith(github.ref, 'refs/tags/')"
+        uses: "symplify/monorepo-split-github-action@2.1"
+        with:
+          # ↓ split <local_path> directory
+          package_directory: "${{ matrix.package.local_path }}"
+
+          # ↓ into https://github.com/org/split_repository repository
+          repository_organization: "backlineint"
+          repository_name: "${{ matrix.package.split_repository }}"
+
+          # ↓ the user signed under the split commit
+          user_name: "brian-ci"
+          user_email: "brian.perry@pantheon.io"
+
+      # with tag
+      - if: "startsWith(github.ref, 'refs/tags/')"
+        uses: "symplify/monorepo-split-github-action@2.1"
+        with:
+          tag: ${GITHUB_REF#refs/tags/}
+
+          package_directory: "${{ matrix.package.local_path }}"
+
+          repository_organization: "backlineint"
+          repository_name: "${{ matrix.package.split_repository }}"
+
+          # ↓ the user signed under the split commit
+          user_name: "brian-ci"
+          user_email: "brian.perry@pantheon.io"
