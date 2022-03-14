@@ -36,7 +36,7 @@ jobs:
           package_directory: "${{ matrix.local_path }}"
 
           # ↓ into https://github.com/org/split_repository repository
-          repository_organization: "backlineint"
+          repository_organization: "pantheon-systems"
           repository_name: "${{ matrix.split_repository }}"
 
           # ↓ the user signed under the split commit
@@ -51,7 +51,7 @@ jobs:
 
           package_directory: "${{ matrix.local_path }}"
 
-          repository_organization: "backlineint"
+          repository_organization: "pantheon-systems"
           repository_name: "${{ matrix.split_repository }}"
 
           # ↓ the user signed under the split commit
