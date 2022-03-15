@@ -2,9 +2,6 @@ version: 2.1
 
 jobs:
   trigger-main-pipeline:
-    filters:
-      branches:
-        only: main
     docker:
       - image: cimg/base:2021.11
     resource_class: small
@@ -21,4 +18,8 @@ jobs:
 workflows:
   trigger-decoupled-drupal:
     jobs:
-      - trigger-main-pipeline
+      - trigger-main-pipeline:
+          filters:
+            branches:
+              only: 
+                - main
