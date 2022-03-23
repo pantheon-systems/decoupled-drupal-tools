@@ -33,7 +33,7 @@ default:
       value: true
   path:
     -
-      alias: ''
+      alias: '/this-is-an-example-article'
       langcode: en
   body:
     -
