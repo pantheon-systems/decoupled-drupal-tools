@@ -4,8 +4,10 @@
     "require": {
         "drupal/decoupled_preview": "dev-main",
         "drupal/default_content": "^2.0@alpha",
+        "drupal/gin": "^3.0@beta",
         "drupal/jsonapi_hypermedia": "^1.6",
         "drupal/jsonapi_menu_items": "^1.2",
+        "drupal/pantheon_advanced_page_cache": "^1.2",
         "drupal/simple_oauth": "^5"
     },
     "require-dev": {
@@ -22,7 +24,7 @@
         },
         {
             "type": "git",
-            "url": "git@github.com:pantheon-systems/pantheon_decoupled.git"
+            "url": "git@github.com:pantheon-systems/drupal_pantheon_decoupled.git"
         }
     ],
     "extra": {

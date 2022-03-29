@@ -22,7 +22,8 @@
     "drupal/simple_oauth": "^5",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_hypermedia": "^1.6",
-    "drupal/decoupled_preview": "dev-main"
+    "drupal/decoupled_preview": "dev-main",
+    "drupal/pantheon_advanced_page_cache": "^1.2"
   },
   "minimum-stability": "dev",
   "homepage": "https://www.drupal.org/project/pantheon_decoupled",
