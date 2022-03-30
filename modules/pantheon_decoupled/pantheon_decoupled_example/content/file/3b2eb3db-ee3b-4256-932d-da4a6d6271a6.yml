@@ -4,6 +4,9 @@ _meta:
   uuid: 86f89130-29e8-4df3-917b-fedc7f2100e9
   default_langcode: en
 default:
+  uid:
+    -
+      target_id: 1
   filename:
     -
       value: pizza.jpg
@@ -15,7 +18,7 @@ default:
       value: image/jpg
   filesize:
     -
-      value: 314587
+      value: 52657
   status:
     -
       value: true

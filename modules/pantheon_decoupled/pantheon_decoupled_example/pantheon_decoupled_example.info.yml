@@ -8,6 +8,8 @@ dependencies:
   - default_content:default_content
 default_content:
   node:
-    - 93620c4c-1b6d-48a8-a14b-bf9822ff5bc0
+    - d4b52b83-e92a-4a4f-b2de-647ecb9fb6d0
+  media:
+    - 2ecd22d4-a5f0-4cef-9e21-625eeaeb02ab
   file:
-    - 86f89130-29e8-4df3-917b-fedc7f2100e9
+    - 3b2eb3db-ee3b-4256-932d-da4a6d6271a6
