@@ -16,5 +16,5 @@ command and commit the result:
 
 vendor/bin/monorepo-builder merge
 
-This combines th dependencies so this project can be installed as a single
-composer dependency for local development purposes.
+This combines dependencies for all profiles and modules so this project can be
+installed as a single composer dependency for local development purposes.
