@@ -5,19 +5,22 @@
  * Enables modules and site configuration for a custom site installation.
  */
 
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+
 /**
  * Implements hook_install_tasks().
  */
 function pantheon_decoupled_profile_install_tasks(&$install_state) {
-    $tasks['pantheon_decoupled_install_demo_content'] = [
-        'display_name' => t('Install demo content'),
-        'display' => TRUE,
-    ];
-    $tasks['pantheon_decoupled_enable_media_field'] = [
-        'display_name' => t('Enable the media image field for article content type'),
-        'display' => TRUE,
-    ];
-    return $tasks;
+  $tasks['pantheon_decoupled_install_demo_content'] = [
+    'display_name' => t('Install demo content'),
+    'display' => TRUE,
+  ];
+  $tasks['pantheon_decoupled_enable_media_field'] = [
+    'display_name' => t('Enable the media image field for article content type'),
+    'display' => TRUE,
+  ];
+  return $tasks;
 }
 
 /**
@@ -43,24 +46,20 @@ function pantheon_decoupled_install_demo_content(array &$install_state) {
  * @throws \Drupal\Core\Entity\EntityStorageException
  */
 function pantheon_decoupled_enable_media_field(array &$install_state) {
-    /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entityDisplayRepository */
-    $entityDisplayRepository = \Drupal::service('entity_display.repository');
-    $entityDisplayRepository->getFormDisplay('node', 'article', 'default')
-        ->setComponent('field_media_image', [
-            'type' => 'media_library_widget',
-        ])
-        ->save();
-    $entityDisplayRepository->getViewDisplay('node', 'article', 'default')
-        ->setComponent('field_media_image', [
-            ['weight' => 100]
-        ])
-        ->save();
-    $entityDisplayRepository
-        ->getFormDisplay('node', 'article', 'default')
-        ->removeComponent('field_image')
-        ->save();
-    $entityDisplayRepository
-        ->getViewDisplay('node', 'article', 'default')
-        ->removeComponent('field_image')
-        ->save();
+  /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entityDisplayRepository */
+  $entityDisplayRepository = \Drupal::service('entity_display.repository');
+  $entityDisplayRepository->getFormDisplay('node', 'article', 'default')
+    ->setComponent('field_media_image', [
+      'type' => 'media_library_widget',
+      'weight' => 4,
+    ])
+    ->save();
+  $entityDisplayRepository->getViewDisplay('node', 'article', 'default')
+    ->setComponent('field_media_image', [
+      'type' =>  'entity_reference_entity_view',
+      'label' => 'hidden',
+      'weight' => -1,
+    ])
+    ->save();
+  FieldStorageConfig::loadByName('node', 'field_image')->delete();
 }

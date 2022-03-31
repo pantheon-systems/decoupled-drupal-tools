@@ -5,7 +5,7 @@ _meta:
   bundle: article
   default_langcode: en
   depends:
-    2ecd22d4-a5f0-4cef-9e21-625eeaeb02ab: media
+    7e01b208-097d-40e9-b1a6-efd103be1cd3: media
 default:
   revision_uid:
     -
@@ -44,10 +44,10 @@ default:
     -
       status: 2
       cid: 0
-      last_comment_timestamp: 1648017534
+      last_comment_timestamp: 1648725026
       last_comment_name: ''
       last_comment_uid: 1
       comment_count: 0
   field_media_image:
     -
-      entity: 2ecd22d4-a5f0-4cef-9e21-625eeaeb02ab
+      entity: 7e01b208-097d-40e9-b1a6-efd103be1cd3
