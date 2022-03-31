@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 7e01b208-097d-40e9-b1a6-efd103be1cd3
+  bundle: image
+  default_langcode: en
+  depends:
+    c573af74-34bb-4a16-8928-ea5e823fde72: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: pizza.jpg
+  created:
+    -
+      value: 1648725243
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: c573af74-34bb-4a16-8928-ea5e823fde72
+      alt: Pizza
+      title: ''
+      width: 640
+      height: 360

@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: node
-  uuid: 93620c4c-1b6d-48a8-a14b-bf9822ff5bc0
+  uuid: d4b52b83-e92a-4a4f-b2de-647ecb9fb6d0
   bundle: article
   default_langcode: en
   depends:
-    86f89130-29e8-4df3-917b-fedc7f2100e9: file
+    7e01b208-097d-40e9-b1a6-efd103be1cd3: media
 default:
   revision_uid:
     -
@@ -21,7 +21,7 @@ default:
       value: 'This is an Example Article'
   created:
     -
-      value: 1635928832
+      value: 1648017483
   promote:
     -
       value: true
@@ -33,7 +33,7 @@ default:
       value: true
   path:
     -
-      alias: '/this-is-an-example-article'
+      alias: ''
       langcode: en
   body:
     -
@@ -44,14 +44,10 @@ default:
     -
       status: 2
       cid: 0
-      last_comment_timestamp: 1635943934
+      last_comment_timestamp: 1648725026
       last_comment_name: ''
       last_comment_uid: 1
       comment_count: 0
-  field_image:
+  field_media_image:
     -
-      entity: 86f89130-29e8-4df3-917b-fedc7f2100e9
-      alt: Pizza
-      title: ''
-      width: 640
-      height: 360
+      entity: 7e01b208-097d-40e9-b1a6-efd103be1cd3
