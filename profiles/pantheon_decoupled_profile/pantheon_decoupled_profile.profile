@@ -61,5 +61,12 @@ function pantheon_decoupled_enable_media_field(array &$install_state) {
       'weight' => -1,
     ])
     ->save();
+  $entityDisplayRepository->getViewDisplay('node', 'article', 'teaser')
+    ->setComponent('field_media_image', [
+      'type' =>  'entity_reference_entity_view',
+      'label' => 'hidden',
+      'weight' => -1,
+    ])
+    ->save();
   FieldStorageConfig::loadByName('node', 'field_image')->delete();
 }
