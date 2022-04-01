@@ -11,7 +11,8 @@
         "drupal/simple_oauth": "^5"
     },
     "require-dev": {
-        "symplify/monorepo-builder": "^10.1"
+        "symplify/monorepo-builder": "^10.1",
+        "squizlabs/php_codesniffer": "4.0.x-dev"
     },
     "repositories": [
         {
@@ -33,6 +34,12 @@
                 "1356276#675: Allow profiles to define a base/parent profile": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch"
             }
         }
+    },
+    "scripts": {
+        "dev-tasks": [
+            "cp git-hooks/pre-commit .git/hooks",
+            "chmod +x .git/hooks/pre-commit"
+          ]
     },
     "replace": {
         "drupal/pantheon_decoupled": "self.version",
