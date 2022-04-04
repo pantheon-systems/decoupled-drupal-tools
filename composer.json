@@ -36,9 +36,9 @@
         }
     },
     "scripts": {
-        "dev-tasks": [
-            "cp git-hooks/pre-commit .git/hooks",
-            "chmod +x .git/hooks/pre-commit"
+        "post-install-cmd": [
+            "chmod +x ./scripts/composer/project-tasks",
+            "./scripts/composer/project-tasks"
           ]
     },
     "replace": {

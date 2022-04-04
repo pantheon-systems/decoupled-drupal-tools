@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#
+# Check if .git directory exists, then only copy the Drupal standards git-hooks/pre-commit.
+#
+if [ -d ".git" ] 
+then
+    echo ".git/ directory exisits,  copy Drupal standards git-hooks/pre-commit to .git/hooks."
+    cp -n scripts/composer/git-hooks/pre-commit .git/hooks
+    chmod +x .git/hooks/pre-commit
+else
+    echo "No .git/ directory found, no action taken for Drupal standards git-hooks/pre-commit."
+fi
