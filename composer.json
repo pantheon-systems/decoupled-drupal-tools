@@ -37,7 +37,6 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "chmod +x ./scripts/composer/project-tasks",
             "./scripts/composer/project-tasks"
           ]
     },

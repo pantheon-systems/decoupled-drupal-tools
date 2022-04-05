@@ -6,7 +6,7 @@
 if [ -d ".git" ] 
 then
     echo ".git/ directory exisits,  copy Drupal standards git-hooks/pre-commit to .git/hooks."
-    cp -n scripts/composer/git-hooks/pre-commit .git/hooks
+    cp scripts/composer/git-hooks/pre-commit .git/hooks
 else
     echo "No .git/ directory found, no action taken for Drupal standards git-hooks/pre-commit."
 fi
