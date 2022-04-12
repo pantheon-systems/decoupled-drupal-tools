@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_aliases
+label: 'Node Aliases'
+type: 'canonical_entities:node'
+pattern: '/[node:content-type]/[node:title]'
+selection_criteria:
+  8fdadf71-abdb-47d7-91fb-e9f220c8a935:
+    id: node_type
+    negate: false
+    uuid: 8fdadf71-abdb-47d7-91fb-e9f220c8a935
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      page: page
+selection_logic: and
+weight: -5
+relationships: {  }

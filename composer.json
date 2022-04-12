@@ -9,7 +9,8 @@
     "drupal/jsonapi_hypermedia": "^1.6",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/pantheon_advanced_page_cache": "^1.2",
-    "drupal/simple_oauth": "^5"
+    "drupal/simple_oauth": "^5",
+    "drupal/pathauto": "^1.9"
   },
   "require-dev": {
     "symplify/monorepo-builder": "^10.1",
