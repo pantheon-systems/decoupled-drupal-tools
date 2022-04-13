@@ -1,6 +1,7 @@
 {
   "name": "drupal/pantheon_decoupled_drupal_tools",
   "type": "drupal-module",
+  "license": "GPL-2.0+",
   "require": {
     "drupal/decoupled_preview": "dev-main",
     "drupal/default_content": "^2.0@alpha",
