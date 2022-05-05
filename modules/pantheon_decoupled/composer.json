@@ -11,10 +11,6 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "git",
-      "url": "git@github.com:pantheon-systems/decoupled_preview.git"
     }
   ],
   "require": {
@@ -22,7 +18,7 @@
     "drupal/simple_oauth": "^5",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_hypermedia": "^1.6",
-    "drupal/decoupled_preview": "dev-main",
+    "drupal/decoupled_preview": "^1.0@alpha",
     "drupal/pantheon_advanced_page_cache": "^1.2"
   },
   "minimum-stability": "dev",
