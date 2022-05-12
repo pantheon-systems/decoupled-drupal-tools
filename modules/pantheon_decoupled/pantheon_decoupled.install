@@ -52,7 +52,7 @@ function pantheon_decoupled_install() {
     'label' => 'Example NextJS Preview',
     'url' => 'https://example.site/api/preview',
     'secret' => $shared_secret,
-    'content_type' => [ 'article' => 'article' ],
+    'content_type' => [],
     'preview_type'  => 'nextjs',
   ]);
   $example_preview->save();
