@@ -5,7 +5,6 @@ description: "Suggested install profile for decoupled Drupal sites with Umami de
 core_version_requirement: "^8.8 || ^9"
 dependencies:
   - pantheon_decoupled:pantheon_decoupled
-  - pantheon_advanced_page_cache:pantheon_advanced_page_cache
 
 themes:
   - gin
