@@ -8,6 +8,7 @@ dependencies:
   - drupal:media_library
   - pantheon_decoupled:pantheon_decoupled
   - pathauto:pathauto
+  - pantheon_advanced_page_cache:pantheon_advanced_page_cache
 
 themes:
   - gin
