@@ -5,6 +5,8 @@ package: Web services
 core: 8.x
 core_version_requirement: ^8 || ^9
 dependencies:
+  - drupal:media
+  - drupal:media_library
   - default_content:default_content
 default_content:
   node:
