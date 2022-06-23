@@ -13,4 +13,4 @@ an example preview site and oAuth consumer for use with the Decoupled Preview.
 
 ## pantheon_decoupled_example
 
-Limited content used to demonstrate example content integrations.
+`pantheon_decoupled` also have a sub-module named `pantheon_decoupled_example` .This module limited content used to demonstrate example content integrations. Enabling this module will also enable media and media_library modules. Which also adds media fields(articles only) & enables pathauto for articles and page content type.

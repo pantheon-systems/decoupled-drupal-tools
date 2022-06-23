@@ -8,6 +8,8 @@ dependencies:
   - drupal:media
   - drupal:media_library
   - default_content:default_content
+  - pathauto:pathauto
+  - pantheon_decoupled:pantheon_decoupled
 default_content:
   node:
     - d4b52b83-e92a-4a4f-b2de-647ecb9fb6d0
