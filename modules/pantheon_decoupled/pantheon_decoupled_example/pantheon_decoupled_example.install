@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for pantheon_decoupled_example.
+ */
+
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\user\Entity\Role;
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function pantheon_decoupled_example_install() {
+  _pantheon_decoupled_example_enable_media_field();
+  _pantheon_decoupled_example_set_media_permissions();
+}
+
+/**
+ * Enable media image field for Article content type.
+ *
+ * @return void
+ */
+function _pantheon_decoupled_example_enable_media_field() {
+  /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entityDisplayRepository */
+  $entityDisplayRepository = \Drupal::service('entity_display.repository');
+  $entityDisplayRepository->getFormDisplay('node', 'article', 'default')
+    ->setComponent('field_media_image', [
+      'type' => 'media_library_widget',
+      'weight' => 4,
+    ])
+    ->save();
+  $entityDisplayRepository->getViewDisplay('node', 'article', 'default')
+    ->setComponent('field_media_image', [
+      'type' =>  'entity_reference_entity_view',
+      'label' => 'hidden',
+      'weight' => -1,
+    ])
+    ->save();
+  $entityDisplayRepository->getViewDisplay('node', 'article', 'teaser')
+    ->setComponent('field_media_image', [
+      'type' =>  'entity_reference_entity_view',
+      'label' => 'hidden',
+      'weight' => -1,
+    ])
+    ->save();
+}
+
+/**
+ * Set correct media viewing permission for anonymous & authenticated users.
+ *
+ * @return void
+ */
+function _pantheon_decoupled_example_set_media_permissions() {
+  Role::load(RoleInterface::ANONYMOUS_ID)
+    ->grantPermission('view media')
+    ->save();
+  Role::load(RoleInterface::AUTHENTICATED_ID)
+    ->grantPermission('view media')
+    ->save();
+}

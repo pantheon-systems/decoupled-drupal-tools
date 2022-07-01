@@ -19,7 +19,8 @@
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_hypermedia": "^1.6",
     "drupal/decoupled_preview": "^1.0@alpha",
-    "drupal/pantheon_advanced_page_cache": "^1.2"
+    "drupal/pantheon_advanced_page_cache": "^1.2",
+    "drupal/pathauto": "^1.10"
   },
   "minimum-stability": "dev",
   "homepage": "https://www.drupal.org/project/pantheon_decoupled",
