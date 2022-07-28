@@ -1,0 +1,8 @@
+# Custom JSON:API endpoint that list configured languages
+pantheon_decoupled.configured_languages_resource:
+  path: '/%jsonapi%/language/language'
+  defaults:
+    _jsonapi_resource: Drupal\pantheon_decoupled\Resource\ConfiguredLanguagesResource
+    _jsonapi_resource_types: ['configurable_language--configurable_language']
+  requirements:
+    _access: 'TRUE'
