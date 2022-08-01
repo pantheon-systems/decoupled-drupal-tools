@@ -9,6 +9,7 @@
         "drupal/jsonapi_hypermedia": "^1.6",
         "drupal/jsonapi_menu_items": "^1.2",
         "drupal/pantheon_advanced_page_cache": "^1.2",
+        "drupal/ctools": "4.0",
         "drupal/pathauto": "^1.9",
         "drupal/simple_oauth": "^5"
     },
