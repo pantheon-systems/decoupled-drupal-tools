@@ -3,13 +3,14 @@
     "type": "drupal-module",
     "license": "GPL-2.0+",
     "require": {
+        "drupal/ctools": "4.0",
         "drupal/decoupled_preview": "^1.0@alpha",
         "drupal/default_content": "^2.0@alpha",
         "drupal/gin": "^3.0@beta",
         "drupal/jsonapi_hypermedia": "^1.6",
         "drupal/jsonapi_menu_items": "^1.2",
         "drupal/pantheon_advanced_page_cache": "^1.2",
-        "drupal/pathauto": "^1.9",
+        "drupal/pathauto": "^1.10",
         "drupal/simple_oauth": "^5"
     },
     "require-dev": {
