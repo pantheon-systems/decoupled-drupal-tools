@@ -9,7 +9,7 @@
         "drupal/gin": "^3.0@beta",
         "drupal/jsonapi_hypermedia": "^1.6",
         "drupal/jsonapi_menu_items": "^1.2",
-        "drupal/pantheon_advanced_page_cache": "^1.2",
+        "drupal/pantheon_advanced_page_cache": "^2.1",
         "drupal/pathauto": "^1.10",
         "drupal/simple_oauth": "^5"
     },
