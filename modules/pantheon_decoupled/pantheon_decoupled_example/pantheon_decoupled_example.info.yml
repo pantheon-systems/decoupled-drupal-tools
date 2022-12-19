@@ -3,7 +3,7 @@ type: module
 description: Example content to demonstrate Decoupled Drupal use cases
 package: Web services
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 dependencies:
   - drupal:media
   - drupal:media_library
