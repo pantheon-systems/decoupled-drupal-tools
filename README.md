@@ -18,3 +18,4 @@ vendor/bin/monorepo-builder merge
 
 This combines dependencies for all profiles and modules so this project can be
 installed as a single composer dependency for local development purposes.
+test
