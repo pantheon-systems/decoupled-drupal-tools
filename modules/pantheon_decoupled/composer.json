@@ -21,7 +21,8 @@
     "drupal/decoupled_preview": "^1.0@alpha",
     "drupal/pantheon_advanced_page_cache": "^2.1",
     "drupal/ctools": "4.0",
-    "drupal/pathauto": "^1.10"
+    "drupal/pathauto": "^1.10",
+    "drupal/build_hooks": "^3.3"
   },
   "minimum-stability": "dev",
   "homepage": "https://www.drupal.org/project/pantheon_decoupled",
