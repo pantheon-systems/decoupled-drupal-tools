@@ -3,6 +3,7 @@
     "type": "drupal-module",
     "license": "GPL-2.0+",
     "require": {
+        "drupal/build_hooks": "^3.3",
         "drupal/ctools": "4.0",
         "drupal/decoupled_preview": "^1.0@alpha",
         "drupal/default_content": "^2.0@alpha",
